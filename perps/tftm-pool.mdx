@@ -1,79 +1,84 @@
 ---
-title: 'tFTM Pool'
-description: 'Understanding the tFTM liquidity pool system'
+title: "The tS Market Making Pool"
+description: "Understanding the tS liquidity pool system"
 ---
 
-## What is tFTM?
+## What is tS?
 
-tFTM represents a groundbreaking approach to liquidity provision on perpetual protocols, enabling participants to act as market makers on Tails Exchange while simultaneously tapping into yields from multiple DeFi protocols. This innovative strategy, termed “multi-protocol rehypothecated yield optimization,” offers tFTM holders diverse streams of income.
+tS represents a groundbreaking approach to liquidity provision on perpetual protocols, enabling participants to act as market makers on Tails Exchange while simultaneously tapping into yields from multiple DeFi protocols. This innovative strategy, termed “multi-protocol rehypothecated yield optimization,” offers tS holders diverse streams of income.
 
 ## Pool Mechanics
 
-### tFTM Vault Mechanics
+### tS Vault Mechanics
 
-Participants contribute assets to the tFTM vault, receiving tFTM tokens as representation of their share. Tails Exchange strategically allocates these assets across a range of protocols, including GMX, GNS, Ethena, and Aave, managing the positions on behalf of users. The allocated liquidity serves a dual purpose:
+Participants contribute assets to the tS vault, receiving tS tokens as representation of their share. Tails Exchange strategically allocates these assets across a range of protocols, including GMX, GNS, Ethena, and Aave, managing the positions on behalf of users. The allocated liquidity serves a dual purpose:
 
-- It’s utilized for market making on the respective platforms, generating returns through trading fees and price movements.
-- Tails Exchange leverages this liquidity to facilitate trading on its own platform, creating an additional layer of yield opportunities.
+* It’s utilized for market making on the respective platforms, generating returns through trading fees and price movements.
 
-The platform aggregates yields from all sources - trading fees, interest from lending protocols, and rewards from liquidity provision - and channels them back to tFTM holders.
+* Tails Exchange leverages this liquidity to facilitate trading on its own platform, creating an additional layer of yield opportunities.
 
-#### Advantages of Providing Liquidity to the tFTM Vault
+The platform aggregates yields from all sources - trading fees, interest from lending protocols, and rewards from liquidity provision - and channels them back to tS holders.
 
-Engaging with the tFTM vault offers several compelling benefits:
+#### Advantages of Providing Liquidity to the tS Vault
 
-- Full retention of rewards from integrated protocols (Lending protocols, other Perps protocols, LSD protocols)
-- A 50% share of Tails Exchange’s total protocol earnings
-- Exposure to potential gains from market making activities across multiple platforms
+Engaging with the tS vault offers several compelling benefits:
 
-This multi-faceted approach to yield generation positions tFTM as a cutting-edge tool for maximizing DeFi returns.
+* Full retention of rewards from integrated protocols (Lending protocols, other Perps protocols, LSD protocols)
+
+* A 50% share of Tails Exchange’s total protocol earnings
+
+* Exposure to potential gains from market making activities across multiple platforms
+
+This multi-faceted approach to yield generation positions tS as a cutting-edge tool for maximizing DeFi returns.
 
 ## Providing Liquidity
 
-### Minting and Redeeming tFTM
+### Minting and Redeeming tS
 
 #### Minting
 
-To mint tFTM, users need to use any supported FTM based asset (such as FTM, aFTM, sFTM) and deposit it into the tFTM vault. The tFTM minted is based on the current tFTM price.
+To mint tS, users need to use any supported S (FTM) based asset (such as S, aaveS, or stakedS ) and deposit it into the tS vault. The tS minted is based on the current tS price.
 
 #### Redeeming
 
-Redeeming tFTM is straightforward. Users enter the amount of tFTM and select a supported FTM based asset to redeem for the equivalent value. The tFTM is then burned, and the FTM based asset is sent to the user’s wallet.
+Redeeming tS is straightforward. Users enter the amount of tS and select a supported S based asset to redeem for the equivalent value. The tS is then burned, and the S based asset is sent to the user’s wallet.
 
 #### Fees and Cooldown
 
-Minting & Redeeming fees are dynamic based on market conditions, TVL, and other risk factors decided by the team. If we believe there is a high market risk, we may increase the fee to mint or redeem tFTM to protect the vault. Cooldown period: 1 day (24h) before minted tFTM can be redeemed.
+Minting & Redeeming fees are dynamic based on market conditions, TVL, and other risk factors decided by the team. If we believe there is a high market risk, we may increase the fee to mint or redeem tS to protect the vault. Cooldown period: 1 day (24h) before minted tS can be redeemed.
 
 ### Additional Features
 
-Users can mint tFTM cross-chain using various meta-aggregators like Axelar, Li.fi, and more.
+Users can mint tS cross-chain using various meta-aggregators like Axelar, Li.fi, and more.
 
-## Why Choose tFTM?
+## Why Choose tS?
 
-tFTM provides liquidity for traders, allowing them to take positions with leverage. The relationship between tFTM holders and traders is as follows:
+tS provides liquidity for traders, allowing them to take positions with leverage. The relationship between tS holders and traders is as follows:
 
-- If traders take a loss, tFTM holders will make a profit.
-- If traders take a profit, tFTM holders will make a loss.
+* If traders take a loss, tS holders will make a profit.
 
-Rewards for providing liquidity and counterparty risk are based on the Sonic Chain where the tFTM was minted.
+* If traders take a profit, tS holders will make a loss.
 
-## Risks Associated with tFTM
+Rewards for providing liquidity and counterparty risk are based on the Sonic Chain where the tS was minted.
 
-Although tFTM value is market neutral and not directly affected by crypto market volatility, holding tFTM still carries risks:
+## Risks Associated with tS
 
-- **Counterparty risk**: If traders make a profit, that profit is paid to the trader out of the tFTM pool.
-- **Depegging risk**: In the unlikely scenario that any of the supported FTM derivative depegs, tFTM could be affected. For example, if USDT depegs, the tFTM price would be affected because USDT backs the vault, making its depeg percentage negatively affect the tFTM price.
+Although tS value is market neutral and not directly affected by crypto market volatility, holding tS still carries risks:
 
-## tFTM Liquidity Pool Mechanics
+* **Counterparty risk**: If traders make a profit, that profit is paid to the trader out of the tS pool.
 
-The open interest available for the platform is limited by the total FTM value (in units of FTM) available in tFTM. Traders cannot open a new position if the total platform open interest meets or exceeds the total TVL in tFTM.
+* **Depegging risk**: In the unlikely scenario that any of the supported FTM derivative depegs, tS could be affected. For example, if USDT depegs, the tS price would be affected because USDT backs the vault, making its depeg percentage negatively affect the tS price.
 
-A portion of all protocol-generated fees, including opening/closing positions, minting tFTM, borrow fees, and excess funding fees, as well as any losses from traders’ realized P&L and liquidations, go towards the tFTM vault, causing its price to increase over time. Any profits from traders’ realized P&L are paid out from the tFTM vault, causing its price to decrease.
+## tS Liquidity Pool Mechanics
 
-The tFTM price is based on the number of USD and tFTM in the vault, at any time, where:
+The open interest available for the platform is limited by the total FTM value (in units of FTM) available in tS. Traders cannot open a new position if the total platform open interest meets or exceeds the total TVL in tS.
 
-tFTM price = USD in vault / tFTM supply
+A portion of all protocol-generated fees, including opening/closing positions, minting tS, borrow fees, and excess funding fees, as well as any losses from traders’ realized P\&L and liquidations, go towards the tS vault, causing its price to increase over time. Any profits from traders’ realized P\&L are paid out from the tFTM vault, causing its price to decrease.
+
+The tS price is based on the number of USD and tS in the vault, at any time, where:
+
+tS price = USD in vault / tS supply
 
 ### Fee Distribution
 
-50% of all platform fees are automatically distributed to tFTM holders. There is no need to stake tFTM to receive these fees; simply holding tFTM automatically accrues additional value over time. This is similar to LSD tokens like stETH or sUSDe, where the value of the token increases over time because the fees are added to the vault directly, increasing the value of the token. 
+50% of all platform fees are automatically distributed to tS holders. There is no need to stake tS to receive these fees; simply holding tS automatically accrues additional value over time. This is similar to LSD tokens like stETH or sUSDe, where the value of the token increases over time because the fees are added to the vault directly, increasing the value of the token.

@@ -9,9 +9,11 @@ Tails Exchange implements a sophisticated fee structure designed to maintain mar
 
 ### General Fees by Asset Class
 
-- **Crypto Pairs**: 0.03% - 0.1%
-- **Forex**: 0.01% - 0.02%
-- **Real World Assets (RWA's)**: 0.1%
+* **Crypto Pairs**: 0.03% - 0.1%
+
+* **Forex**: 0.01% - 0.02%
+
+* **Real World Assets (RWA's)**: 0.1%
 
 ### Position Fees
 
@@ -28,30 +30,44 @@ Fee percentage is determined by the asset's historical volatility and market dep
 Tails Exchange utilizes an innovative velocity-based funding fee mechanism. This system balances open interest while providing stability for market makers and reducing costs for traders.
 
 Key variables in the funding fee calculation:
-- `targetRate`: Equilibrium funding rate
-- `skewRatio`: Normalized difference between long and short open interest
-- `velocityFactor`: Rate of change towards the target rate
-- `riskFactor`: Based on 14-day average volatility
+
+* `targetRate`: Equilibrium funding rate
+
+* `skewRatio`: Normalized difference between long and short open interest
+
+* `velocityFactor`: Rate of change towards the target rate
+
+* `riskFactor`: Based on 14-day average volatility
 
 #### Dynamic Funding Rate Mechanism
 
 The funding rate system maintains balance in the market by adjusting based on the difference between long and short open interest:
 
 1. **Long-Dominated Market**
-   - When long positions exceed short positions, the funding rate that longs pay to shorts gradually increases
-   - This continues until:
-     - The imbalance between longs and shorts falls below a set threshold, or
-     - The funding rate reaches its upper limit
+
+   * When long positions exceed short positions, the funding rate that longs pay to shorts gradually increases
+
+   * This continues until:
+
+     * The imbalance between longs and shorts falls below a set threshold, or
+
+     * The funding rate reaches its upper limit
 
 2. **Balancing Act**
-   - If more short positions open or long positions close, reducing the long-short imbalance, the funding rate begins to decrease
-   - This adjustment continues until the open interest difference falls below the threshold
+
+   * If more short positions open or long positions close, reducing the long-short imbalance, the funding rate begins to decrease
+
+   * This adjustment continues until the open interest difference falls below the threshold
 
 3. **Short-Dominated Market**
-   - If short positions surpass long positions, the funding rate reverses direction
-   - Shorts start paying longs
-   - The rate gradually increases as the imbalance grows
-   - This continues until the open interest difference falls below the threshold or the rate hits its upper limit
+
+   * If short positions surpass long positions, the funding rate reverses direction
+
+   * Shorts start paying longs
+
+   * The rate gradually increases as the imbalance grows
+
+   * This continues until the open interest difference falls below the threshold or the rate hits its upper limit
 
 ### Borrowing Fees
 
@@ -72,8 +88,11 @@ deltaPercent = Penalty × (2 × totalOI + positionSize) / (2 × vaultTVL)
 
 executionPrice = markPrice × (1 ± deltaPercent)
 ```
+
 Where the + sign is used for LONG positions and the - sign for SHORT positions.
 
 The `pairPenalty` is asset-specific, correlating with historical volatility and market depth:
-- For highly liquid assets like BTC/USD and ETH/USD, `pairPenalty` is 0
-- Less liquid assets have higher penalties to encourage balanced markets and increase the cost of exploitive trading strategies
+
+* For highly liquid assets like BTC/USD and ETH/USD, `pairPenalty` is 0
+
+* Less liquid assets have higher penalties to encourage balanced markets and increase the cost of exploitive trading strategies
