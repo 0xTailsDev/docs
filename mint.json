@@ -1,85 +1,76 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Tails Exchange",
   "logo": {
     "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "light": "/logo/dark.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#FFD700",
+    "light": "#FFF4BD",
+    "dark": "#000000",
+    "background": {
+      "dark": "#000000",
+      "light": "#FFFFFF"
+    },
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#FFD700",
+      "to": "#FFA500"
     }
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Twitter",
+      "url": "https://x.com/TailsExchange"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Trade Now",
+    "url": "https://www.tails.exchange/"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Discord",
+      "icon": "discord",
+      "url": "https://discord.gg/msS4bQaSTD"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Twitter",
+      "icon": "twitter",
+      "url": "https://twitter.com/TailsExchange"
     },
     {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "Telegram",
+      "icon": "telegram",
+      "url": "https://t.me/tailsexchange"
+    },
+    {
+      "name": "Website",
+      "icon": "globe",
+      "url": "https://www.tails.exchange/"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "introduction"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Perps Exchange",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "perps/overview",
+        "perps/tftm-pool",
+        "perps/oracle-mechanisms",
+        "perps/fees"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Token",
       "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "token/tails"
       ]
     }
   ],

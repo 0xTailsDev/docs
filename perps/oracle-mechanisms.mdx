@@ -1,0 +1,14 @@
+---
+title: 'Oracle Mechanisms'
+description: 'Price feeds and oracle systems on Tails Exchange'
+---
+
+## Price Feeds Overview
+
+Tails Exchange provides traders with access to an extensive selection of trading pairs across various markets, leveraging aggregated pricing data from multiple endpoints to establish a robust dynamic average. The computational work happens off-chain, with prices being submitted on-chain alongside a verifiable historical record of all previous price submissions.
+
+Our price feeds are secured through reference on-chain oracles, with Stork & Pyth being our preferred provider due to its high speed approach that aligns well with Tails Exchange's aggregated pricing methodology. Additionally, any reference oracle can be configured to soft-peg to the price feed of specific trading pairs.
+
+## Price Update Mechanism
+
+When a user submits an order, it enters a market-making settlement period where the asset is priced based on its risk. A price update is then submitted on-chain, and the user's trade becomes live and settled. This process occurs within 2-3 seconds at most. It does not rely directly on the oracle; instead, it uses real-time prices from the exchanges we aggregate prices from, bound by a percentage to the Stork/Pyth oracle price. 
